@@ -28,10 +28,12 @@
 # About
 
 
-The **VX To Do List case** is the best app to manager your Tasks :D
+The **VX To Do List case** is the best simple app to manager your Tasks :D
 
 Application made based on challenge test requested by VX Case.
 
+Expected behaviour, data is saved on input outfocus:
+<img src="public/readme/front_desk_behaviour.gif" alt="vscode tips"/>
 
 
 # Technologies
@@ -73,6 +75,9 @@ Downloading dependencies:
   $ yarn
 ```
 Starting app && server:
+
+**PS:** <br/>App starts in -> **/3000**<br/> JSON Server starts in -> **/3001**
+
 ```bash
   $ yarn start
 
@@ -80,17 +85,20 @@ Starting app && server:
 
   $ yarn server -> to start JSON Server 
 ```
+<img src="public/readme/projectstart.gif" alt="vscode tips"/>
+
 
 # Upgrades:
 Some features are pending, those are:
 - [ ]  Responsive Layout;
-- [ ]  Salvar título ou descrição ao perder foco no input;
+- [ ]  Colocar dados em Local Storage;
+- [ ]  Ordenar atributos (id ficando por último)
 - [ ]  Pop-up de notificação para: Adição - Exclusão e Edição de Itens
 
 <p align=center> 
   <h6 align=center>💙 Made by</h6> 
   <h2 align=center>
-  <a href="https://www.linkedin.com/in/gama-leal" />  Moacir Gama
+  <a href="https://www.linkedin.com/in/gama-leal">  Moacir Gama
     <img src="https://image.flaticon.com/icons/png/512/174/174857.png" width=20>
   </a>
   </h2>
