@@ -9,7 +9,14 @@ interface ITodo {
 }
 
 const Home: React.FC = () => {
-  const [todoList, setTodoList] = useState<ITodo[]>([]);
+  const [todoList, setTodoList] = useState<ITodo[]>([
+    {
+      id: 0,
+      titulo: '',
+      descricao: '',
+    },
+  ]);
+
   const [getTitle, setTitle] = useState('');
   const [getDesc, setDesc] = useState('');
 
@@ -33,16 +40,14 @@ const Home: React.FC = () => {
   }, [setTodoList, todoList]);
 
   const handleRemoveTask = useCallback(
-    async (taskId) => {
-      await api.delete(`tarefas/${taskId}`);
+    async (todoItemId: ITodo['id']) => {
+      await api.delete(`tarefas/${todoItemId}`);
 
-      const returnNewTaskList = todoList.filter((removedTask) => {
-        return removedTask.id !== taskId;
-      });
-
-      setTodoList(returnNewTaskList);
+      setTodoList(oldList =>
+        oldList.filter(filtered => filtered.id !== todoItemId)
+      );
     },
-    [setTodoList, todoList]
+    [setTodoList]
   );
   const handleUpdateTaskTitle = useCallback(
     async (taskItem: ITodo) => {
@@ -55,8 +60,6 @@ const Home: React.FC = () => {
         `tarefas/${taskItem.id}`,
         newTaskItemTitle
       );
-
-      console.log('title', data);
 
       setTodoList(
         todoList.map((item) => {
@@ -75,8 +78,6 @@ const Home: React.FC = () => {
       };
 
       const { data } = await api.put(`tarefas/${taskItem.id}`, newTaskItemDesc);
-
-      console.log('desc', data);
 
       setTodoList(
         todoList.map((item) => {
@@ -97,9 +98,9 @@ const Home: React.FC = () => {
         <h1>My VX List:</h1>
         <button onClick={handleAddTask}> Add New Task</button>
         <ul>
-          {todoList.map((todoItem, index) => {
+          {todoList.map((todoItem) => {
             return (
-              <li key={index}>
+              <li key={todoItem.id}>
                 <div className={styles.idContainer}>
                   <strong>Task number: {todoItem.id}</strong>
                   <button onClick={() => handleRemoveTask(todoItem.id)}>
@@ -107,40 +108,26 @@ const Home: React.FC = () => {
                   </button>
                 </div>
                 <div className={styles.fieldsetsContainer}>
-                  <div>
-                    <fieldset className={styles.inputContainer}>
-                      <span>Title</span>
-                      <input
-                        type="text"
-                        name="titulo"
-                        onChange={(event) => setTitle(event.target.value)}
-                        defaultValue={todoItem.titulo}
-                      />
-                    </fieldset>
-                    <fieldset className={styles.inputContainer}>
-                      <span>Description</span>
-                      <input
-                        type="text"
-                        name="descricao"
-                        onChange={(event) => setDesc(event.target.value)}
-                        defaultValue={todoItem.descricao}
-                      />
-                    </fieldset>
-                  </div>
-                  <div className={styles.saveButtonContainer}>
-                    <button
-                      title="task_title"
-                      onClick={() => handleUpdateTaskTitle(todoItem)}
-                    >
-                      Save
-                    </button>
-                    <button
-                      title="task_description"
-                      onClick={() => handleUpdateTaskDescription(todoItem)}
-                    >
-                      Save
-                    </button>
-                  </div>
+                  <fieldset className={styles.inputContainer}>
+                    <span>Title</span>
+                    <input
+                      type="text"
+                      name="titulo"
+                      onChange={(event) => setTitle(event.target.value)}
+                      defaultValue={todoItem.titulo}
+                      onBlur={() => handleUpdateTaskTitle(todoItem)}
+                    />
+                  </fieldset>
+                  <fieldset className={styles.inputContainer}>
+                    <span>Description</span>
+                    <input
+                      type="text"
+                      name="descricao"
+                      onChange={(event) => setDesc(event.target.value)}
+                      defaultValue={todoItem.descricao}
+                      onBlur={() => handleUpdateTaskDescription(todoItem)}
+                    />
+                  </fieldset>
                 </div>
               </li>
             );
