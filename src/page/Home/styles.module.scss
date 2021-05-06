@@ -46,8 +46,8 @@
         margin-top: 2rem;
         padding: 1rem;
         width: 30%;
-        border-radius: 2rem;
-        box-shadow: 0 0 0.5rem #25292A;
+        border-radius: .6rem;
+        box-shadow: 0 0 0.2rem #25292A;
 
         .idContainer {
           display: flex;
@@ -67,8 +67,7 @@
         }
         .fieldsetsContainer {
           display: flex;
-          align-items: center;
-          justify-content: space-between;
+          flex-direction: column;
         }
 
         .inputContainer {
@@ -88,6 +87,10 @@
 
             &::placeholder {
               color: #000;
+            }
+
+            &:focus{
+              box-shadow: 0 0 0.6rem #25292A;
             }
           }
         }
