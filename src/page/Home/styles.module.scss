@@ -1,0 +1,117 @@
+.container {
+  background: #f3efee;
+  max-width: 1366px;
+  margin: 2rem auto;
+  height: 100%;
+
+  section {
+    margin: 2rem;
+    padding: 2rem;
+
+    > button {
+      background: #25292A;
+      cursor: pointer;
+      margin: 1rem auto;
+      padding: 1rem;
+      border-radius: 2rem;
+      color: #f3efee;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    span,
+    input,
+    strong {
+      color: #25292A;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      list-style: none;
+
+      li {
+        background: #c9bcb9;
+        margin-right: 2rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        width: 30%;
+        border-radius: 2rem;
+        box-shadow: 0 0 0.5rem #25292A;
+
+        .idContainer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          strong {
+            font-weight: bold;
+          }
+          button {
+            background: #25292A;
+            border-radius: 50%;
+            padding: 0.4rem;
+            color: #fff;
+            line-height: 6px;
+          }
+        }
+        .fieldsetsContainer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .inputContainer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          outline: none;
+          border: none;
+
+          input {
+            outline: none;
+            border: none;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            width: 60%;
+
+            &::placeholder {
+              color: #000;
+            }
+          }
+        }
+
+        .saveButtonContainer{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+
+            button {
+                margin: .8rem;
+                padding: .2rem .5rem;
+                font-size: .8rem;
+                color: #fff;
+                border-radius: .5rem;
+                background: #25292A;
+                transition: filter 0.2s;
+                &:hover{
+                  filter: brightness(0.7);
+                }
+            }
+        }
+      }
+    }
+  }
+}
