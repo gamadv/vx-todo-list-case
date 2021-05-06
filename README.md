@@ -19,13 +19,13 @@
    </h1>
 
 <h6 align=center>
-  <a href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#upgrades">Upgrades</a>
+  <a href="#notebook-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#hammer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#black_nib-getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#heavy_plus_sign-upgrades">Upgrades</a>
 </h6>
 
-# About
+# :notebook: About
 
 
 The **VX To Do List case** is the best simple app to manager your Tasks :D
@@ -36,7 +36,7 @@ Expected behaviour, data is saved on input outfocus:
 <img src="public/readme/front_desk_behaviour.gif" alt="vscode tips"/>
 
 
-# Technologies
+# :hammer: Technologies
 
 #### 📃 Dependencies: -> <i><kbd> [package.json](./package.json) </kbd></i>
 
@@ -53,7 +53,7 @@ Script created to execute JSON Server:
 "server": "json-server src/service/db.json -w -p 3001"
 ```
 
-# Getting Started
+# :black_nib: Getting Started
 
 You must have installed:
 
@@ -88,7 +88,7 @@ Starting app && server:
 <img src="public/readme/projectstart.gif" alt="vscode tips"/>
 
 
-# Upgrades:
+# :heavy_plus_sign: Upgrades:
 Some features are pending, those are:
 - [ ]  Responsive Layout;
 - [ ]  Colocar dados em Local Storage;
