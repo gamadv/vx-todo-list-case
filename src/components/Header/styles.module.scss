@@ -1,0 +1,12 @@
+.headerContainer {
+  background: #000;
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1366px;
+    margin: 0 auto;
+    height: 5rem;
+  }
+}
