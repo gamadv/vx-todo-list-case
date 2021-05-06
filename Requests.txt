@@ -1,0 +1,21 @@
+Baixe o repositório no link abaixo e use-o como base para fazer o CRUD de um TODO List.
+
+link repositório: https://github.com/othonassis/to-do-list
+
+Requisitos: NPM
+Instale as dependências: npm install
+Inicie o servidor: npx json-server --watch db.json
+Inicie o servidor angular: ng serve
+
+Endereço padrão para o servidor json: http://localhost:3000/tarefas
+Endereço padrão para o angular: http://localhost:4200 
+
+Endpoints: 
+
+GET     /tarefas        Lista todas as tarefas
+GET     /tarefas/id     Busca uma tarefa
+POST    /tarefas        Salva uma tarefa
+PUT     /tarefas/id     Edita uma tarefa
+DELETE  /tarefas/id     Remove uma tarefa
+
+
