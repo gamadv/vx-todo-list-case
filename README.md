@@ -83,7 +83,9 @@ Starting app && server:
 
 # Upgrades:
 Some features are pending, those are:
-- [ ]  Responsive Layout
+- [ ]  Responsive Layout;
+- [ ]  Salvar título ou descrição ao perder foco no input;
+- [ ]  Pop-up de notificação para: Adição - Exclusão e Edição de Itens
 
 <p align=center> 
   <h6 align=center>💙 Made by</h6> 
