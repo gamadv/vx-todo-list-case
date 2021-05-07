@@ -28,11 +28,11 @@
 # :notebook: About
 
 
-The **VX To Do List case** is the best simple app to manager your Tasks :D
+The **VX To Do List case** is the best simple app to manage your Tasks :D
 
 Application made based on challenge test requested by VX Case.
 
-Expected behaviour, data is saved on input outfocus:
+Expected behaviour, data is saved when the input is out of focus:
 <img src="public/readme/front_desk_behaviour.gif" alt="vscode tips"/>
 
 
